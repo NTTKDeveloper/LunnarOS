@@ -19,10 +19,13 @@ buildimg:
 run_without_grub:
 	qemu-system-x86_64 -kernel $(KERNELDIR) -initrd $(BUSYBOXDIR)
 
-run_iso:
+run_bios:
 	#Bios Iso
 	qemu-system-x86_64 -boot d -cdrom $(OSNAME).iso -m 512 
 # 	qemu-system-x86_64 -boot d -cdrom ./$(OSNAME).iso -m 256M -cpu qemu64 -drive if=pflash,format=raw,unit=0,file="$(OVMFDIR)/OVMF_CODE-pure-efi.fd",readonly=on -drive if=pflash,format=raw,unit=1,file="$(OVMFDIR)/OVMF_VARS-pure-efi.fd" -vga std
+
+run_efi:
+	qemu-system-x86_64 -boot d -cdrom ./$(OSNAME).iso -m 256M -cpu qemu64 -drive if=pflash,format=raw,unit=0,file="$(OVMFDIR)/OVMF_CODE-pure-efi.fd",readonly=on -drive if=pflash,format=raw,unit=1,file="$(OVMFDIR)/OVMF_VARS-pure-efi.fd"
 
 clean: 
 	rm -rf ./iso ./$(OSNAME).iso
