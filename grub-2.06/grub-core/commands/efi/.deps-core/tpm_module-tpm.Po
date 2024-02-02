@@ -1,0 +1,27 @@
+commands/efi/tpm_module-tpm.o: commands/efi/tpm.c ../include/grub/err.h \
+ ../include/grub/symbol.h ../config.h ../include/grub/compiler.h \
+ ../include/grub/i18n.h ../include/grub/efi/api.h ../include/grub/types.h \
+ ../include/grub/cpu/types.h ../include/grub/efi/efi.h \
+ ../include/grub/dl.h ../include/grub/elf.h ../include/grub/list.h \
+ ../include/grub/misc.h /usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h \
+ ../include/grub/efi/tpm.h ../include/grub/mm.h ../include/grub/tpm.h \
+ ../include/grub/term.h ../include/grub/unicode.h
+../include/grub/err.h:
+../include/grub/symbol.h:
+../config.h:
+../include/grub/compiler.h:
+../include/grub/i18n.h:
+../include/grub/efi/api.h:
+../include/grub/types.h:
+../include/grub/cpu/types.h:
+../include/grub/efi/efi.h:
+../include/grub/dl.h:
+../include/grub/elf.h:
+../include/grub/list.h:
+../include/grub/misc.h:
+/usr/lib/gcc/x86_64-linux-gnu/11/include/stdarg.h:
+../include/grub/efi/tpm.h:
+../include/grub/mm.h:
+../include/grub/tpm.h:
+../include/grub/term.h:
+../include/grub/unicode.h:
